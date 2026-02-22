@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+body {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.text-h1 {
+  font-size: 82px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.82px;
+  text-transform: uppercase;
+}
+
+.text-h2 {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-h3 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-btn-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-h1-320 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.text-h2-320 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-subheader {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+}/*# sourceMappingURL=style.css.map */

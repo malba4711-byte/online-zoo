@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+$theme-black: #0000;
+$theme-navy: #20113d;
+$theme-white: #ffff;
+$theme-orange: #f58021;
+$theme-orange-dark: #d26004;
+$theme-turquoise: #00a092;
+$theme-turquoise-dark: #05786e;
+$shadow-orange: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
+$shadow-turquoise: 0 4px 30px 0 rgba(0, 160, 146, 0.3);
+$transparent: rgba(0, 0, 0, 0);
+
+@mixin button-template(
+  $b-shadow: null,
+  $b-rad: 5px,
+  $border: null,
+  $border-hover: null,
+  $color-bk,
+  $color-bk-hover,
+  $width,
+  $v-pad: 26px,
+  $h-pad: 45px,
+  $gap: 10px,
+  $text-color: $theme-white
+) {
+  display: flex;
+  width: $width;
+  height: 74px;
+  padding: $v-pad $h-pad;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  background-color: $color-bk;
+  border-radius: $b-rad;
+  border: $border;
+  color: $text-color;
+  &:hover,
+  &:active {
+    background-color: $color-bk-hover;
+    box-shadow: $b-shadow;
+    border: $border-hover;
+    color: $theme-white;
+  }
+}
+
+body {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+$text-styles: (
+  "h1": (size: 82px, weight: 800, line-height: normal, letter-spacing: 0.82px, text-transform: uppercase),
+  "h2": (size: 54px, weight: 600, line-height: normal, text-transform: uppercase),
+  "h3": (size: 42px, weight: 500, line-height: normal, text-transform: uppercase),
+  "body": (size: 18px, weight: 400, line-height: 1.5),
+  "btn-text": (size: 18px, weight: 600, line-height: normal, text-transform: uppercase),
+  "h1-320": (size: 40px, weight: 800, line-height: normal, letter-spacing: 0.4px, text-transform: uppercase),
+  "h2-320": (size: 26px, weight: 500, line-height: normal, text-text-transform: uppercase),
+  "subheader": (size: 26px, weight: 500, line-height: 1.3)
+);
+
+@each $name, $properties in $text-styles {
+  .text-#{$name} {
+    font-size: map-get($properties, size);
+    font-weight: map-get($properties, weight);
+    line-height: map-get($properties, line-height);
+    letter-spacing: map-get($properties,letter-spacing);
+    text-transform: map-get($properties, text-transform);
+  }
+}
