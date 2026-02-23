@@ -1,0 +1,115 @@
+@import "variables.scss";
+
+@mixin button-template(
+  $b-shadow: null,
+  $b-rad: 5px,
+  $border: null,
+  $border-hover: null,
+  $color-bk,
+  $color-bk-hover,
+  $width,
+  $v-pad: 26px,
+  $h-pad: 45px,
+  $gap: 10px,
+  $text-color: $theme-white
+) {
+  display: flex;
+  width: $width;
+  height: 74px;
+  padding: $v-pad $h-pad;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  background-color: $color-bk;
+  border-radius: $b-rad;
+  border: $border;
+  color: $text-color;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    background-color: $color-bk-hover;
+    box-shadow: $b-shadow;
+    border: $border-hover;
+    color: $theme-white;
+
+    & svg path {
+      fill: $theme-white;
+    }
+  }
+  & div {
+    display: flex;
+  }
+  & svg path {
+    fill: $text-color;
+  }
+}
+
+.donate-btn {
+  @include button-template(
+    $b-shadow: $shadow-orange,
+    $color-bk: $theme-orange,
+    $color-bk-hover: $theme-orange-dark,
+    $text-color: $theme-white,
+    $b-rad: 5px,
+    $width: 240px,
+    $gap: 10px
+  );
+}
+.view-btn {
+  @include button-template(
+    $b-shadow: $shadow-orange,
+    $color-bk: $theme-orange,
+    $color-bk-hover: $theme-orange-dark,
+    $text-color: $theme-white,
+    $b-rad: 5px,
+    $width: 240px,
+    $gap: 10px
+  );
+}
+.message-btn {
+  @include button-template(
+    $b-shadow: $shadow-turquoise,
+    $color-bk: $theme-turquoise,
+    $color-bk-hover: $theme-turquoise-dark,
+    $text-color: $theme-white,
+    $b-rad: 5px,
+    $width: 359px,
+    $gap: 10px
+  );
+}
+.favorite-btn {
+  @include button-template(
+    $color-bk: $transparent,
+    $color-bk-hover: $theme-navy,
+    $border: $border-navy,
+    $border-hover: $border-white,
+    $b-rad: 5px,
+    $width: 359px,
+    $gap: 10px,
+    $text-color: $theme-navy
+  );
+}
+.feedback-btn {
+  @include button-template(
+    $color-bk: $transparent,
+    $color-bk-hover: $theme-turquoise,
+    $border: $border-white,
+    $border-hover: $border-white,
+    $b-rad: 5px,
+    $width: 359px,
+    $gap: 10px
+  );
+}
+.view-btn,
+.feed-btn,
+.view-map-btn {
+  @include button-template(
+    $color-bk: $transparent,
+    $b-rad: 5px,
+    $gap: 10px,
+    $text-color: $theme-orange,
+    $width: null,
+    $color-bk-hover: $theme-orange,
+  );
+}

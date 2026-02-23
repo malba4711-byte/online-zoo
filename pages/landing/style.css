@@ -1,11 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
-body {
-  color: #000;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
+.donate-btn {
+  display: flex;
+  width: 240px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f58021;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+.donate-btn:hover, .donate-btn:active {
+  background-color: #d26004;
+  box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
+  color: white;
+}
+.donate-btn:hover svg path, .donate-btn:active svg path {
+  fill: white;
+}
+.donate-btn div {
+  display: flex;
+}
+.donate-btn svg path {
+  fill: white;
+}
+
+.view-btn {
+  display: flex;
+  width: 240px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f58021;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+.view-btn:hover, .view-btn:active {
+  background-color: #d26004;
+  box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
+  color: white;
+}
+.view-btn:hover svg path, .view-btn:active svg path {
+  fill: white;
+}
+.view-btn div {
+  display: flex;
+}
+.view-btn svg path {
+  fill: white;
+}
+
+.message-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #00a092;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+.message-btn:hover, .message-btn:active {
+  background-color: #05786e;
+  box-shadow: 0 4px 30px 0 rgba(0, 160, 146, 0.3);
+  color: white;
+}
+.message-btn:hover svg path, .message-btn:active svg path {
+  fill: white;
+}
+.message-btn div {
+  display: flex;
+}
+.message-btn svg path {
+  fill: white;
+}
+
+.favorite-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid #20113d;
+  color: #20113d;
+  white-space: nowrap;
+}
+.favorite-btn:hover, .favorite-btn:active {
+  background-color: #20113d;
+  border: 1px solid white;
+  color: white;
+}
+.favorite-btn:hover svg path, .favorite-btn:active svg path {
+  fill: white;
+}
+.favorite-btn div {
+  display: flex;
+}
+.favorite-btn svg path {
+  fill: #20113d;
+}
+
+.feedback-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  white-space: nowrap;
+}
+.feedback-btn:hover, .feedback-btn:active {
+  background-color: #00a092;
+  border: 1px solid white;
+  color: white;
+}
+.feedback-btn:hover svg path, .feedback-btn:active svg path {
+  fill: white;
+}
+.feedback-btn div {
+  display: flex;
+}
+.feedback-btn svg path {
+  fill: white;
+}
+
+.view-btn,
+.feed-btn,
+.view-map-btn {
+  display: flex;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  color: #f58021;
+  white-space: nowrap;
+}
+.view-btn:hover, .view-btn:active,
+.feed-btn:hover,
+.feed-btn:active,
+.view-map-btn:hover,
+.view-map-btn:active {
+  background-color: #f58021;
+  color: white;
+}
+.view-btn:hover svg path, .view-btn:active svg path,
+.feed-btn:hover svg path,
+.feed-btn:active svg path,
+.view-map-btn:hover svg path,
+.view-map-btn:active svg path {
+  fill: white;
+}
+.view-btn div,
+.feed-btn div,
+.view-map-btn div {
+  display: flex;
+}
+.view-btn svg path,
+.feed-btn svg path,
+.view-map-btn svg path {
+  fill: #f58021;
 }
 
 .text-h1 {
@@ -61,4 +234,27 @@ body {
   font-size: 26px;
   font-weight: 500;
   line-height: 1.3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
