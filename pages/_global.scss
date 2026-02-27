@@ -1,70 +1,14 @@
 @import "variables.scss";
 @import "buttons.scss";
+@import "mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
-
-$text-styles: (
-  "h1": (
-    size: 82px,
-    weight: 800,
-    line-height: normal,
-    letter-spacing: 0.82px,
-    text-transform: uppercase,
-  ),
-  "h2": (
-    size: 54px,
-    weight: 600,
-    line-height: normal,
-    text-transform: uppercase,
-  ),
-  "h3": (
-    size: 42px,
-    weight: 500,
-    line-height: normal,
-    text-transform: uppercase,
-  ),
-  "body": (
-    size: 18px,
-    weight: 400,
-    line-height: 1.5,
-  ),
-  "btn-text": (
-    size: 18px,
-    weight: 600,
-    line-height: normal,
-    text-transform: uppercase,
-  ),
-  "h1-320": (
-    size: 40px,
-    weight: 800,
-    line-height: normal,
-    letter-spacing: 0.4px,
-    text-transform: uppercase,
-  ),
-  "h2-320": (
-    size: 26px,
-    weight: 500,
-    line-height: normal,
-    text-text-transform: uppercase,
-  ),
-  "subheader": (
-    size: 26px,
-    weight: 500,
-    line-height: 1.3,
-  ),
-);
-
-@each $name, $properties in $text-styles {
-  .text-#{$name} {
-    font-size: map-get($properties, size);
-    font-weight: map-get($properties, weight);
-    line-height: map-get($properties, line-height);
-    letter-spacing: map-get($properties, letter-spacing);
-    text-transform: map-get($properties, text-transform);
-  }
-}
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -74,15 +18,196 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  max-width: map-get($breakpoints, "x-large");
+}
+footer,
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 0 10px 0 10px;
 }
 
-button {
-  // reset button styles
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
+footer {
+  height: 329px;
+  background-color: $theme-navy;
+  > .container {
+    max-width: 1400px;
+    flex: 1;
+    gap: 100px;
+  }
+}
+
+header {
+  height: 110px;
+  background-color: $theme-orange;
+
+  @include media-query-resolution("large") {
+    // padding: 0 100px 0 100px;
+  }
+  @include media-query-resolution("tablet") {
+    padding: 30px 47px 30px 20px;
+    justify-content: space-between;
+  }
+  > .container {
+    max-width: 1400px;
+    flex: 1;
+    @include media-query-resolution("large") {
+      max-width: 1000px;
+    }
+    @include media-query-resolution("desktop") {
+      gap: $gap-20;
+    }
+    @include media-query-resolution("tablet") {
+      gap: 80px;
+    }
+  }
+  h1 {
+    margin-left: 504px;
+  }
+}
+
+main {
+  flex: 1;
+}
+a {
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.none {
+  display: none;
+}
+
+footer {
+  & > .container {
+    gap: 70px 100px;
+    flex-wrap: wrap;
+    ul {
+      list-style: none;
+      padding: 0;
+      gap: 46px;
+      @include media-query-resolution("large") {
+        gap: $gap-30;
+      }
+      @include media-query-resolution("desktop") {
+        gap: $gap-20;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 150%; /* 27px */
+      text-transform: uppercase;
+      color: $theme-white;
+      &:hover {
+        color: $theme-turquoise;
+      }
+    }
+  }
+  .logo {
+    gap: 30px;
+  }
+  .line {
+    flex: 0 0 100%;
+    height: 1px;
+    background: $theme-white;
+  }
+}
+
+header nav.container {
+  &.active {
+    display: flex;
+    .container.socials {
+      display: none;
+    }
+    .menu {
+      flex-direction: column;
+      position: fixed;
+      top: -18px;
+      right: 0;
+      background-color: $theme-navy;
+      z-index: 10;
+      width: 311px;
+      height: 100vh;
+      max-height: 754px;
+      gap: 50px;
+      padding: 150px 95px 269px 95px;
+    }
+    a {
+      color: $theme-white;
+    }
+  }
+  @include media-query-resolution("tablet") {
+    display: none;
+  }
+  gap: 67px;
+  @include media-query-resolution("large") {
+    gap: 80px;
+  }
+  @include media-query-resolution("desktop") {
+    gap: $gap-20;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    gap: 48px;
+    @include media-query-resolution("large") {
+      gap: $gap-30;
+    }
+    @include media-query-resolution("desktop") {
+      gap: $gap-20;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 150%; /* 27px */
+    text-transform: uppercase;
+    color: $theme-black;
+    &:hover {
+      color: $theme-turquoise;
+    }
+  }
+}
+.socials {
+  gap: 30px;
+  svg {
+    cursor: pointer;
+    &:hover {
+      transform: scale($default-scale);
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.svg-location {
+  & .svg-animal-location {
+    fill: $theme-orange !important;
+    filter: drop-shadow($drop-shadow-orange-map);
+  }
+  &:hover {
+    & .svg-animal-location-active {
+      stroke: $theme-white;
+      filter: drop-shadow($drop-shadow-gray-map);
+    }
+    & .svg-animal-location {
+      fill: $theme-white !important;
+    }
+  }
 }

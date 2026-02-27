@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+//text styles
+@each $name, $properties in $text-styles {
+  .text-#{$name} {
+    font-size: map-get($properties, size);
+    font-weight: map-get($properties, weight);
+    line-height: map-get($properties, line-height);
+    letter-spacing: map-get($properties, letter-spacing);
+    text-transform: map-get($properties, text-transform);
+  }
+}
+
+//buttons
+@mixin button-template(
+  $b-shadow: null,
+  $b-rad: 5px,
+  $border: null,
+  $border-hover: null,
+  $color-bk,
+  $color-bk-hover,
+  $width,
+  $v-pad: 26px,
+  $h-pad: 45px,
+  $gap: 10px,
+  $text-color: $theme-white
+) {
+  display: flex;
+  width: $width;
+  height: 74px;
+  padding: $v-pad $h-pad;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  background-color: $color-bk;
+  border-radius: $b-rad;
+  border: $border;
+  color: $text-color;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    background-color: $color-bk-hover;
+    box-shadow: $b-shadow;
+    border: $border-hover;
+    color: $theme-white;
+
+    & svg path {
+      fill: $theme-white;
+    }
+  }
+  & div {
+    display: flex;
+  }
+  & svg path {
+    fill: $text-color;
+  }
+}
+
+//resolutions
+@mixin media-query-resolution($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

@@ -1,14 +1,86 @@
-$theme-black: #0000;
+$theme-black: black;
 $theme-navy: #20113d;
 $theme-white: #ffff;
 $theme-orange: #f58021;
 $theme-orange-dark: #d26004;
 $theme-turquoise: #00a092;
 $theme-turquoise-dark: #05786e;
+$theme-turquoise-light: #80cfc8;
 $shadow-orange: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
 $shadow-turquoise: 0 4px 30px 0 rgba(0, 160, 146, 0.3);
+$shadow-white: 0 4px 30px rgba(255, 255, 255, 0.5);
 $transparent: rgba(0, 0, 0, 0);
 $border-white: 1px solid $theme-white;
 $border-orange: 1px solid $theme-orange;
 $border-turquoise: 1px solid $theme-turquoise;
 $border-navy: 1px solid $theme-navy;
+$drop-shadow-gray-map: 0 4px 30px rgba(255, 255, 255, 0.5);
+$drop-shadow-orange-map: 0 4px 30px rgba(245, 128, 33, 0.7);
+$gap-30: 30px;
+$gap-20: 20px;
+
+$default-scale: 1.2;
+$transition: right 0.4s ease-in-out;
+
+$breakpoints: (
+  "mobile": 480px,
+  //320
+  "tablet": 768px,
+  //640
+  "desktop": 1024px,
+  //1200
+  "large": 1200px,
+  //1920
+  "x-large": 1920px,
+);
+
+$text-styles: (
+  "h1": (
+    size: 82px,
+    weight: 800,
+    line-height: normal,
+    letter-spacing: 0.82px,
+    text-transform: uppercase,
+  ),
+  "h2": (
+    size: 54px,
+    weight: 600,
+    line-height: normal,
+    text-transform: uppercase,
+  ),
+  "h3": (
+    size: 42px,
+    weight: 500,
+    line-height: normal,
+    text-transform: uppercase,
+  ),
+  "body": (
+    size: 18px,
+    weight: 400,
+    line-height: 1.5,
+  ),
+  "btn-text": (
+    size: 18px,
+    weight: 600,
+    line-height: normal,
+    text-transform: uppercase,
+  ),
+  "h1-320": (
+    size: 40px,
+    weight: 800,
+    line-height: normal,
+    letter-spacing: 0.4px,
+    text-transform: uppercase,
+  ),
+  "h2-320": (
+    size: 26px,
+    weight: 500,
+    line-height: normal,
+    text-text-transform: uppercase,
+  ),
+  "subheader": (
+    size: 26px,
+    weight: 500,
+    line-height: 1.3,
+  ),
+);
