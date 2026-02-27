@@ -33,6 +33,11 @@
   line-height: normal;
   text-transform: uppercase;
 }
+@media (max-width: 480px) {
+  .text-btn-text {
+    text-transform: unset;
+  }
+}
 
 .text-h1-320 {
   font-size: 40px;
@@ -77,6 +82,11 @@ button {
   color: white;
   white-space: nowrap;
 }
+@media (max-width: 480px) {
+  .donate-btn {
+    height: 45px;
+  }
+}
 .donate-btn:hover, .donate-btn:active {
   background-color: #d26004;
   box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
@@ -105,6 +115,11 @@ button {
   color: white;
   white-space: nowrap;
 }
+@media (max-width: 480px) {
+  .view-btn {
+    height: 45px;
+  }
+}
 .view-btn:hover, .view-btn:active {
   background-color: #d26004;
   box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
@@ -132,6 +147,11 @@ button {
   border-radius: 5px;
   color: white;
   white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .message-btn {
+    height: 45px;
+  }
 }
 .message-btn:hover, .message-btn:active {
   background-color: #05786e;
@@ -162,6 +182,11 @@ button {
   color: #20113d;
   white-space: nowrap;
 }
+@media (max-width: 480px) {
+  .favorite-btn {
+    height: 45px;
+  }
+}
 .favorite-btn:hover, .favorite-btn:active {
   background-color: #20113d;
   border: 1px solid white;
@@ -191,6 +216,11 @@ button {
   color: white;
   white-space: nowrap;
 }
+@media (max-width: 480px) {
+  .feedback-btn {
+    height: 45px;
+  }
+}
 .feedback-btn:hover, .feedback-btn:active {
   background-color: #00a092;
   border: 1px solid white;
@@ -204,6 +234,11 @@ button {
 }
 .feedback-btn svg path {
   fill: white;
+}
+@media (max-width: 480px) {
+  .feedback-btn {
+    width: 299px;
+  }
 }
 
 .view-btn,
@@ -219,6 +254,13 @@ button {
   border-radius: 5px;
   color: #f58021;
   white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .view-btn,
+  .feed-btn,
+  .view-map-btn {
+    height: 45px;
+  }
 }
 .view-btn:hover, .view-btn:active,
 .feed-btn:hover,
@@ -257,6 +299,11 @@ button {
   border-radius: 5px;
   color: white;
   white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .other-btn {
+    height: 45px;
+  }
 }
 .other-btn:hover, .other-btn:active {
   background-color: #80cfc8;
@@ -345,6 +392,11 @@ button {
   line-height: normal;
   text-transform: uppercase;
 }
+@media (max-width: 480px) {
+  .text-btn-text {
+    text-transform: unset;
+  }
+}
 
 .text-h1-320 {
   font-size: 40px;
@@ -398,7 +450,7 @@ header {
 }
 
 footer {
-  height: 329px;
+  min-height: 329px;
   background-color: #20113d;
 }
 footer > .container {
@@ -461,18 +513,90 @@ a {
   display: none;
 }
 
+.w100 {
+  width: 100%;
+}
+
+.g30 {
+  gap: 30px;
+}
+
 footer > .container {
   gap: 70px 100px;
   flex-wrap: wrap;
 }
+@media (max-width: 1200px) {
+  footer > .container .footer-menu {
+    max-width: calc(100% - 80px);
+    margin: auto;
+  }
+}
+@media (max-width: 1024px) {
+  footer > .container {
+    padding: 50px 0;
+  }
+  footer > .container .footer-menu {
+    flex-direction: column;
+  }
+  footer > .container .logo,
+  footer > .container nav > ul {
+    max-width: unset;
+    justify-content: space-around;
+  }
+  footer > .container nav > ul {
+    gap: 53px;
+  }
+}
+@media (max-width: 768px) {
+  footer > .container .logo {
+    gap: 53px;
+    justify-content: center;
+  }
+  footer > .container .copyright,
+  footer > .container .socials {
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  footer > .container {
+    gap: 30px;
+  }
+  footer > .container .socials {
+    order: 2;
+  }
+  footer > .container .footer-menu {
+    order: 1;
+  }
+  footer > .container .logo {
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer > .container nav > ul {
+    gap: 15px;
+  }
+  footer > .container .menu {
+    font-size: 16px;
+  }
+  footer > .container .line {
+    order: 3;
+  }
+  footer > .container .copyright {
+    order: 4;
+    gap: 30px;
+    flex-direction: column;
+    margin: unset !important;
+  }
+}
 footer > .container ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   gap: 46px;
 }
 @media (max-width: 1200px) {
   footer > .container ul {
-    gap: 30px;
+    gap: 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -490,8 +614,45 @@ footer > .container a {
 footer > .container a:hover {
   color: #00a092;
 }
+footer > .container .copyright {
+  flex: 1;
+  gap: 50px;
+  color: white;
+}
+@media (max-width: 1200px) {
+  footer > .container .copyright {
+    gap: 30px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  footer > .container .copyright {
+    gap: 20px;
+  }
+}
+footer > .container .socials {
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  footer > .container .socials {
+    gap: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  footer > .container .socials {
+    margin-right: 40px;
+  }
+}
 footer .logo {
-  gap: 30px;
+  max-width: 414px;
+}
+@media (max-width: 1200px) {
+  footer .logo {
+    max-width: 344px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 29px;
+  }
 }
 footer .line {
   flex: 0 0 100%;

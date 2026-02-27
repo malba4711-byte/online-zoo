@@ -34,7 +34,7 @@ header {
 }
 
 footer {
-  height: 329px;
+  min-height: 329px;
   background-color: $theme-navy;
   > .container {
     max-width: 1400px;
@@ -90,17 +90,84 @@ a {
 .none {
   display: none;
 }
+.w100 {
+  width: 100%;
+}
+.g30 {
+  gap: 30px;
+}
 
 footer {
   & > .container {
     gap: 70px 100px;
     flex-wrap: wrap;
+    @include media-query-resolution("large") {
+      .footer-menu {
+        max-width: calc(100% - 80px);
+        margin: auto;
+      }
+    }
+    @include media-query-resolution("desktop") {
+      padding: 50px 0;
+      .footer-menu {
+        flex-direction: column;
+      }
+      .logo,
+      nav > ul {
+        max-width: unset;
+        justify-content: space-around;
+      }
+      nav > ul {
+        gap: 53px;
+      }
+    }
+    @include media-query-resolution("tablet") {
+      .logo {
+        gap: 53px;
+        justify-content: center;
+      }
+      .copyright,
+      .socials {
+        flex: 0 0 100%;
+        justify-content: center;
+      }
+    }
+    @include media-query-resolution("mobile") {
+      gap: 30px;
+      .socials {
+        order: 2;
+      }
+      .footer-menu {
+        order: 1;
+      }
+      .logo {
+        flex-direction: column;
+        gap: 30px;
+      }
+      nav > ul {
+        gap: 15px;
+      }
+      .menu {
+        font-size: 16px;
+      }
+      .line {
+        order: 3;
+      }
+      .copyright {
+        order: 4;
+        gap: 30px;
+        flex-direction: column;
+        margin: unset !important;
+      }
+    }
+
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
       gap: 46px;
       @include media-query-resolution("large") {
-        gap: $gap-30;
+        gap: $gap-20;
       }
       @include media-query-resolution("desktop") {
         gap: $gap-20;
@@ -116,9 +183,36 @@ footer {
         color: $theme-turquoise;
       }
     }
+    .copyright {
+      flex: 1;
+      gap: 50px;
+      color: $theme-white;
+      @include media-query-resolution("large") {
+        gap: $gap-30;
+        margin-left: 40px;
+      }
+      @include media-query-resolution("desktop") {
+        gap: $gap-20;
+      }
+    }
+    .socials {
+      gap: 40px;
+      @include media-query-resolution("tablet") {
+        gap: 50px;
+      }
+      @include media-query-resolution("large") {
+        margin-right: 40px;
+      }
+    }
   }
   .logo {
-    gap: 30px;
+    max-width: 414px;
+    @include media-query-resolution("large") {
+      max-width: 344px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 29px;
+    }
   }
   .line {
     flex: 0 0 100%;

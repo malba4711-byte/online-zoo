@@ -67,6 +67,9 @@ button {
     $width: 359px,
     $gap: 10px
   );
+  @include media-query-resolution("mobile") {
+    width: 299px;
+  }
 }
 .view-btn,
 .feed-btn,

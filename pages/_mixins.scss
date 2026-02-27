@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+//resolutions
+@mixin media-query-resolution($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 //text styles
 @each $name, $properties in $text-styles {
   .text-#{$name} {
@@ -8,6 +15,11 @@
     line-height: map-get($properties, line-height);
     letter-spacing: map-get($properties, letter-spacing);
     text-transform: map-get($properties, text-transform);
+    @if $name == "btn-text" {
+      @include media-query-resolution("mobile") {
+        text-transform: unset;
+      }
+    }
   }
 }
 
@@ -37,6 +49,9 @@
   border: $border;
   color: $text-color;
   white-space: nowrap;
+  @include media-query-resolution("mobile") {
+    height: 45px;
+  }
 
   &:hover,
   &:active {
@@ -57,9 +72,3 @@
   }
 }
 
-//resolutions
-@mixin media-query-resolution($breakpoint) {
-  @media (max-width: map-get($breakpoints, $breakpoint)) {
-    @content;
-  }
-}
