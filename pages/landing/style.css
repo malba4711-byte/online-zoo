@@ -745,10 +745,27 @@ header nav.container a:hover {
   fill: #f58021 !important;
   filter: drop-shadow(0 4px 30px rgba(245, 128, 33, 0.7));
 }
+.svg-location:hover {
+  fill: white !important;
+  filter: drop-shadow(0 4px 30px rgba(255, 255, 255, 0.5));
+}
 .svg-location:hover .svg-animal-location-active {
   stroke: white;
   filter: drop-shadow(0 4px 30px rgba(255, 255, 255, 0.5));
 }
 .svg-location:hover .svg-animal-location {
   fill: white !important;
+}
+
+.svg-location-new .svg-animal-location-new {
+  fill: #f58021;
+}
+.svg-location-new:hover .svg-animal-location-new {
+  fill: white;
+}
+.svg-location-new:hover {
+  fill: white !important;
+}
+.svg-location-new:hover .svg-animal-location-active-new {
+  stroke: white;
 }/*# sourceMappingURL=style.css.map */

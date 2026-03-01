@@ -297,12 +297,28 @@ header nav.container {
     filter: drop-shadow($drop-shadow-orange-map);
   }
   &:hover {
+    fill: $theme-white !important;
+    filter: drop-shadow($drop-shadow-gray-map);
     & .svg-animal-location-active {
       stroke: $theme-white;
       filter: drop-shadow($drop-shadow-gray-map);
     }
     & .svg-animal-location {
       fill: $theme-white !important;
+    }
+  }
+}
+.svg-location-new {
+  & .svg-animal-location-new {
+    fill: $theme-orange;
+  }
+  &:hover {
+    .svg-animal-location-new {
+      fill: $theme-white;
+    }
+    fill: $theme-white !important;
+    & .svg-animal-location-active-new {
+      stroke: $theme-white;
     }
   }
 }
