@@ -28,15 +28,15 @@
   <div id="footer-placeholder"></div>
   <script>
     try {
-      fetch('/pages/_header.html')
+      fetch('../_header.html')
         .then(response => response.text())
         .then(data => document.getElementById('header-placeholder').innerHTML = data)
-        .then(fetch('/pages/_footer.html')
+        .then(fetch('../_footer.html')
           .then(response => response.text())
           .then(data => document.getElementById('footer-placeholder').innerHTML = data))
         .then(() => {
           const script = document.createElement('script');
-          script.src = '/pages/global-scripts.js';
+          script.src = '../global-scripts.js';
           document.body.appendChild(script);
         });
     } catch (error) {
