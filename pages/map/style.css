@@ -751,4 +751,444 @@ header nav.container a:hover {
 }
 .svg-location:hover .svg-animal-location {
   fill: white !important;
+}
+
+.text-h1 {
+  font-size: 82px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.82px;
+  text-transform: uppercase;
+}
+
+.text-h2 {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-h3 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-btn-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  .text-btn-text {
+    text-transform: unset;
+  }
+}
+
+.text-h1-320 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.text-h2-320 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-subheader {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.text-h1 {
+  font-size: 82px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.82px;
+  text-transform: uppercase;
+}
+
+.text-h2 {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-h3 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-btn-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  .text-btn-text {
+    text-transform: unset;
+  }
+}
+
+.text-h1-320 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.text-h2-320 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-subheader {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.donate-btn {
+  display: flex;
+  width: 240px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f58021;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .donate-btn {
+    height: 45px;
+  }
+}
+.donate-btn:hover, .donate-btn:active {
+  background-color: #d26004;
+  box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
+  color: white;
+}
+.donate-btn:hover svg path, .donate-btn:active svg path {
+  fill: white;
+}
+.donate-btn div {
+  display: flex;
+}
+.donate-btn svg path {
+  fill: white;
+}
+
+.view-btn {
+  display: flex;
+  width: 240px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f58021;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .view-btn {
+    height: 45px;
+  }
+}
+.view-btn:hover, .view-btn:active {
+  background-color: #d26004;
+  box-shadow: 0 4px 30px 0 rgba(245, 128, 33, 0.3);
+  color: white;
+}
+.view-btn:hover svg path, .view-btn:active svg path {
+  fill: white;
+}
+.view-btn div {
+  display: flex;
+}
+.view-btn svg path {
+  fill: white;
+}
+
+.message-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #00a092;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .message-btn {
+    height: 45px;
+  }
+}
+.message-btn:hover, .message-btn:active {
+  background-color: #05786e;
+  box-shadow: 0 4px 30px 0 rgba(0, 160, 146, 0.3);
+  color: white;
+}
+.message-btn:hover svg path, .message-btn:active svg path {
+  fill: white;
+}
+.message-btn div {
+  display: flex;
+}
+.message-btn svg path {
+  fill: white;
+}
+
+.favorite-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid #20113d;
+  color: #20113d;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .favorite-btn {
+    height: 45px;
+  }
+}
+.favorite-btn:hover, .favorite-btn:active {
+  background-color: #20113d;
+  border: 1px solid white;
+  color: white;
+}
+.favorite-btn:hover svg path, .favorite-btn:active svg path {
+  fill: white;
+}
+.favorite-btn div {
+  display: flex;
+}
+.favorite-btn svg path {
+  fill: #20113d;
+}
+
+.feedback-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .feedback-btn {
+    height: 45px;
+  }
+}
+.feedback-btn:hover, .feedback-btn:active {
+  background-color: #00a092;
+  border: 1px solid white;
+  color: white;
+}
+.feedback-btn:hover svg path, .feedback-btn:active svg path {
+  fill: white;
+}
+.feedback-btn div {
+  display: flex;
+}
+.feedback-btn svg path {
+  fill: white;
+}
+@media (max-width: 480px) {
+  .feedback-btn {
+    width: 299px;
+  }
+}
+
+.view-btn,
+.feed-btn,
+.view-map-btn {
+  display: flex;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  color: #f58021;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .view-btn,
+  .feed-btn,
+  .view-map-btn {
+    height: 45px;
+  }
+}
+.view-btn:hover, .view-btn:active,
+.feed-btn:hover,
+.feed-btn:active,
+.view-map-btn:hover,
+.view-map-btn:active {
+  background-color: #f58021;
+  color: white;
+}
+.view-btn:hover svg path, .view-btn:active svg path,
+.feed-btn:hover svg path,
+.feed-btn:active svg path,
+.view-map-btn:hover svg path,
+.view-map-btn:active svg path {
+  fill: white;
+}
+.view-btn div,
+.feed-btn div,
+.view-map-btn div {
+  display: flex;
+}
+.view-btn svg path,
+.feed-btn svg path,
+.view-map-btn svg path {
+  fill: #f58021;
+}
+
+.other-btn {
+  display: flex;
+  height: 74px;
+  padding: 26px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #00a092;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .other-btn {
+    height: 45px;
+  }
+}
+.other-btn:hover, .other-btn:active {
+  background-color: #80cfc8;
+  color: white;
+}
+.other-btn:hover svg path, .other-btn:active svg path {
+  fill: white;
+}
+.other-btn div {
+  display: flex;
+}
+.other-btn svg path {
+  fill: white;
+}
+
+.burger-button {
+  z-index: 100;
+  display: none;
+}
+@media (max-width: 768px) {
+  .burger-button {
+    display: flex;
+  }
+}
+.burger-button {
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.burger-button span {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.4s ease-in-out;
+  transform-origin: left center;
+}
+.burger-button.active span {
+  background-color: white;
+}
+.burger-button.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.burger-button.active span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.burger-button.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.map {
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 70px;
+  padding: 40px 0 150px 0;
+}
+.map h2 {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #20113d;
+}
+
+.location-coala {
+  vector-effect: non-scaling-stroke;
+}
+.location-coala:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

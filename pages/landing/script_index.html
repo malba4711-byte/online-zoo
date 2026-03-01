@@ -8,33 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <script src="/pages/global-scripts.js" defer></script>
 </head>
 
 <body>
   <div id="header-placeholder"></div>
   <main>
-    <section>
-      <h2 class="text-h2">Section Topic</h2>
-      <p class="text-h3">Content goes here.</p>
-      just text
-      <div class="text-subheader">
-        <div class="">
-          other text
-        </div>
-      </div>
-    </section>
   </main>
 
   <div id="footer-placeholder"></div>
   <script>
-    fetch('_header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    try {
+      fetch('/pages/_header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data)
+        .then(fetch('/pages/_footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer-placeholder').innerHTML = data))
+        .then(() => {
+          const script = document.createElement('script');
+          script.src = '/pages/global-scripts.js';
+          document.body.appendChild(script);
+        });
+    } catch (error) {
+      console.log("Error loading header and footer files with error")
+    }
 
-    fetch('_footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
   </script>
 </body>
 

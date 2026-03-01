@@ -1,0 +1,25 @@
+@use "../global.scss" as g;
+@use "../_variables.scss" as v;
+@import "../_mixins.scss";
+@import "../_buttons.scss";
+
+.map {
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 70px;
+  padding: 40px 0 150px 0;
+  h2 {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: $theme-navy;
+  }
+}
+
+.location-coala {
+  vector-effect: non-scaling-stroke;
+  &:hover {
+    cursor: pointer;
+  }
+}
