@@ -180,7 +180,8 @@ footer {
       line-height: 150%; /* 27px */
       text-transform: uppercase;
       color: $theme-white;
-      &:hover {
+      &:hover,
+      &.active-link {
         color: $theme-turquoise;
       }
     }
@@ -272,7 +273,8 @@ header nav.container {
     line-height: 150%; /* 27px */
     text-transform: uppercase;
     color: $theme-black;
-    &:hover {
+    &:hover,
+    &.active-link {
       color: $theme-turquoise;
     }
   }

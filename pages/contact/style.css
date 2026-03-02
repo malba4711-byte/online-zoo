@@ -612,7 +612,7 @@ footer > .container a {
   text-transform: uppercase;
   color: white;
 }
-footer > .container a:hover {
+footer > .container a:hover, footer > .container a.active-link {
   color: #00a092;
 }
 footer > .container .copyright {
@@ -723,7 +723,7 @@ header nav.container a {
   text-transform: uppercase;
   color: black;
 }
-header nav.container a:hover {
+header nav.container a:hover, header nav.container a.active-link {
   color: #00a092;
 }
 
