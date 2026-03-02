@@ -38,8 +38,7 @@
           const script = document.createElement('script');
           script.src = '../global-scripts.js';
           document.body.appendChild(script);
-        })
-        .then(highlightActiveLink());
+        });
     } catch (error) {
       console.log("Error loading header and footer files with error")
     }
