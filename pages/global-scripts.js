@@ -15,8 +15,13 @@ navMenu.addEventListener("click", () => {
 
 function highlightActiveLink() {
   const links = document.querySelectorAll("header nav a");
+  const normalizePath = (path) =>
+    path.replace(/\/index\.html$/, "").replace(/\/$/, "");
+  const currentPath = normalizePath(window.location.pathname);
+
   links.forEach((link) => {
-    if (link.href === window.location.href) {
+    const linkPath = normalizePath(new URL(link.href).pathname);
+    if (linkPath === currentPath) {
       link.classList.add("active-link");
     }
   });
