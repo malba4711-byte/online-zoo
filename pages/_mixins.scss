@@ -10,6 +10,7 @@
 //text styles
 @each $name, $properties in $text-styles {
   .text-#{$name} {
+    margin: 0;
     font-size: map-get($properties, size);
     font-weight: map-get($properties, weight);
     line-height: map-get($properties, line-height);
@@ -71,4 +72,3 @@
     fill: $text-color;
   }
 }
-

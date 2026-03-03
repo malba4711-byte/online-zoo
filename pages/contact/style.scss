@@ -3,23 +3,82 @@
 @import "../_mixins.scss";
 @import "../_buttons.scss";
 
-.map {
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 70px;
-  padding: 40px 0 150px 0;
-  h2 {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    color: $theme-navy;
+main {
+  align-items: flex-start;
+  .container {
+    align-items: flex-start;
+  }
+  & > .container {
+    flex-direction: column;
+  }
+  .text-h2 {
+    color: $theme-turquoise;
   }
 }
+.hero {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
+.feedback {
+  justify-content: space-between;
+  width: 100%;
+  margin: 150px auto;
+  gap: 50px;
+  @include media-query-resolution("large") {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+  .info {
+    flex-direction: column;
+    gap: 50px;
+    max-width: 545px;
+    @include media-query-resolution("large") {
+      max-width: 835px;
+      margin: auto;
+      align-items: center;
+    }
+    
+  }
+  .form-wrapper {
+    flex: 1;
+    max-width: 680px;
+    @include media-query-resolution("large") {
+      max-width: 835px;
+      margin: auto;
+      width: 100%;
+    }
 
-.location {
-  vector-effect: non-scaling-stroke;
-  &:hover {
-    cursor: pointer;
+    .form-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include media-query-resolution("large") {
+          max-width: 740px;
+        }
+        label {
+          font-weight: 600;
+          line-height: 150%; /* 27px */
+          text-transform: uppercase;
+        }
+        .required {
+          color: $theme-turquoise;
+        }
+        input,
+        textarea {
+          padding-top: 17px;
+          padding-left: 20px;
+          padding-bottom: 17px;
+        }
+      }
+    }
+    button {
+      margin-top: 20px;
+    }
   }
 }
