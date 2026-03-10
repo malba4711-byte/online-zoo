@@ -517,6 +517,12 @@ a {
   white-space: nowrap;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -536,6 +542,10 @@ a {
 
 .g30 {
   gap: 30px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 footer > .container {
@@ -606,9 +616,6 @@ footer > .container {
   }
 }
 footer > .container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   gap: 46px;
 }
 @media (max-width: 1200px) {

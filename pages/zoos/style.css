@@ -517,6 +517,12 @@ a {
   white-space: nowrap;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -536,6 +542,10 @@ a {
 
 .g30 {
   gap: 30px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 footer > .container {
@@ -606,9 +616,6 @@ footer > .container {
   }
 }
 footer > .container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   gap: 46px;
 }
 @media (max-width: 1200px) {
@@ -1221,23 +1228,110 @@ button {
   transform: rotate(-45deg);
 }
 
-.map {
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 70px;
-  padding: 40px 0 150px 0;
-}
-.map h2 {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  color: #20113d;
+main {
+  position: relative;
 }
 
-.location {
-  vector-effect: non-scaling-stroke;
+.sidebar {
+  background-color: #20113d;
+  color: white;
+  width: 100%;
+  max-width: 220px;
+  position: sticky;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.location:hover {
-  cursor: pointer;
+.sidebar .menu-toggler {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+.sidebar .menu-toggler .live {
+  width: 120px;
+  height: 38px;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 0 0 5px 0;
+  background: #f58021;
+  align-self: flex-start;
+}
+.sidebar .menu-toggler > svg {
+  margin-right: 30px;
+}
+.sidebar .menu-scroller {
+  border-top: 1px solid white;
+  height: 80px;
+  justify-content: center;
+}
+.sidebar ul {
+  flex-direction: column;
+  overflow: hidden;
+  height: 683px;
+}
+.sidebar ul .sidebar-animals {
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  border-bottom: unset;
+  height: unset;
+}
+.sidebar ul .sidebar-animals .container {
+  height: 171px;
+}
+.sidebar ul .sidebar-animals svg {
+  fill: black;
+}
+.sidebar ul > li {
+  height: 171px;
+  border-bottom: 1px solid white;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  fill: #f58021;
+  stroke: none;
+  flex-shrink: 0;
+}
+.sidebar ul > li span {
+  width: 169px;
+}
+.sidebar ul > li .svg-sidebar-animal {
+  fill: black;
+}
+.sidebar ul > li:hover, .sidebar ul > li.active {
+  fill: white;
+  stroke: white;
+}
+.sidebar ul > li:hover .svg-sidebar-animal, .sidebar ul > li.active .svg-sidebar-animal {
+  fill: black;
+}
+
+.make-donation {
+  background-color: #20113d;
+  color: white;
+  padding-left: 261px;
+}
+.make-donation > div {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.make-donation .make-donation-annotation {
+  gap: 20px;
+}
+.make-donation .make-donation-button {
+  gap: 10px;
+}
+.make-donation .make-donation-button .donate-btn {
+  width: 320px;
+}
+@media (max-width: 1200px) {
+  .make-donation {
+    padding: 40px 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

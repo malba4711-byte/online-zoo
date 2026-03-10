@@ -79,6 +79,11 @@ main {
 a {
   white-space: nowrap;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .container {
   display: flex;
@@ -96,6 +101,9 @@ a {
 }
 .g30 {
   gap: 30px;
+}
+.pointer {
+  cursor: pointer;
 }
 
 footer {
@@ -163,9 +171,6 @@ footer {
     }
 
     ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
       gap: 46px;
       @include media-query-resolution("large") {
         gap: $gap-20;

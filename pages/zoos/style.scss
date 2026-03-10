@@ -2,24 +2,111 @@
 @use "../_variables.scss" as v;
 @import "../_mixins.scss";
 @import "../_buttons.scss";
-
-.map {
-  justify-content: center;
-  flex-direction: column;
+main {
+  position: relative;
+}
+.sidebar {
+  background-color: $theme-navy;
+  color: $theme-white;
   width: 100%;
-  gap: 70px;
-  padding: 40px 0 150px 0;
-  h2 {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    color: $theme-navy;
+  max-width: 220px;
+  position: sticky;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .menu-toggler {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid $theme-white;
+    display: flex;
+    align-items: center;
+    .live {
+      width: 120px;
+      height: 38px;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 0 0 5px 0;
+      background: $theme-orange;
+      align-self: flex-start;
+    }
+    & > svg {
+      margin-right: 30px;
+    }
+  }
+  .menu-scroller {
+    border-top: 1px solid $theme-white;
+    height: 80px;
+    justify-content: center;
+  }
+  ul {
+    flex-direction: column;
+    overflow: hidden;
+    height: 683px;
+    // position: relative;
+
+    .sidebar-animals {
+      position: absolute;
+      top: 0;
+      flex-direction: column;
+      border-bottom: unset;
+      height: unset;
+      .container {
+        height: 171px;
+      }
+      svg {
+        fill: $theme-black;
+      }
+    }
+
+    & > li {
+      height: 171px;
+      border-bottom: 1px solid $theme-white;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      fill: $theme-orange;
+      stroke: none;
+      flex-shrink: 0;
+      span {
+        width: 169px;
+      }
+      .svg-sidebar-animal {
+        fill: $theme-black;
+      }
+      &:hover,
+      &.active {
+        fill: $theme-white;
+        stroke: $theme-white;
+        .svg-sidebar-animal {
+          fill: $theme-black;
+        }
+      }
+    }
   }
 }
 
-.location {
-  vector-effect: non-scaling-stroke;
-  &:hover {
-    cursor: pointer;
+.make-donation {
+  background-color: $theme-navy;
+  color: $theme-white;
+  padding-left: 261px;
+  &>div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .make-donation-annotation {
+    gap: 20px;
+  }
+  .make-donation-button {
+    gap: 10px;
+    .donate-btn {
+      width: 320px;
+    }
+  }
+  @include media-query-resolution("large") {
+    padding: 40px 30px;
   }
 }
